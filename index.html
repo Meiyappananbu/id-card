@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TCE_id card</title>
+    <style>
+html{
+    padding:0;
+    margin:0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+#details{
+    margin-top: 250px;
+    border:1px solid black;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px black;
+    float:none;
+}
+select{
+    width: 200px;
+    color:grey;
+    padding:3px;
+    border-radius: 20px;
+}
+#h1{
+    text-align: center;
+    text-decoration: underline;
+}
+label{
+    font-size: large;
+}
+input{
+    border:none;
+    border-bottom:1px solid black;
+    margin-right: 2px;
+    outline: none;
+    float: right;
+    width: 300px;
+    padding-bottom: 4px;
+}
+button{
+    margin-left: 135px;
+    padding:8px;
+    width:150px;
+    border-radius: 20px;
+    border:1px solid black;
+}
+.img{
+    border:none;
+    color:black;
+}
+#button{
+    width:150px;
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 20px;
+    float: none;
+    margin-left: 140px;
+}
+
+
+
+#logo{
+    height:100px;
+    width:130px;
+    border: 1px solid rgb(73, 73, 168);
+    background-color:rgb(73, 73, 168);
+    float: left;
+}
+#cllg{
+    color:white;
+    float:left;
+    margin-top: 0px;
+}
+#autono{
+    color:white;
+    float:left;
+    margin-top: -20px;
+    margin-left: 145px;
+}
+#place{
+    color:white;
+    float:left;
+    margin-top: -20px;
+    margin-left: 230px;
+}
+#algin{
+    color:white;
+    float:left;
+    margin-top: -20px;
+    margin-left: 355px;
+}
+#color{
+    width:840px;
+    height: 110px;
+    border: 1px solid rgb(73, 73, 168);
+    background-color: rgb(73, 73, 168);
+}
+#profile{
+    width:200px;
+    margin-top: 10px;
+    border: 1px solid rgb(73, 73, 168);
+    float: left;
+    margin-left: 20px;
+    height: 200px;
+    object-fit: contain;
+}
+#nameid{
+    color:blue;
+    margin-left: 250px;
+    margin-top: 10px;
+}
+#Roll{
+    color:green;
+    margin-left: 250px;
+    font-size: x-large;
+}
+#engcat{
+    color:red;
+    margin-left: 250px;
+    font-size: x-large;
+}
+#barcode1{
+    float:left;
+    width:300px;
+    height:200px;
+    margin-top: -60px;
+    margin-left: 25px;
+}
+#valid{
+    float: left;
+    margin-top: 50px;
+    margin-left: -530px;
+}
+#pic{
+    width: 200px;
+    float: right;
+    margin-top: -50px;
+}
+#ic{
+    margin-left: 660px;
+    color: rgb(73, 73, 168);
+}
+#front{
+    height:450px;
+    width: 843px;
+    border: 1px solid black;
+}
+#back{
+    height:450px;
+    width: 843px;
+    border: 1px solid black;
+}
+#back h2{
+    margin-left: 55px;
+}
+#back #line{
+    float: none;
+    margin-left: 150px;
+}
+#line1,#line2,#line3{
+     margin-bottom: -15px;
+}
+#back p{
+    text-align: center;
+    margin-bottom: -15px;
+}
+#dateB{
+    margin-top: 30px;
+}
+#front,#back{
+    display: none;
+}
+#dev{
+    font-size: large;
+    float: none;
+    margin-top: -90px;
+    text-align: center;
+}
+#help{
+    margin-top: 40px;
+}
+    </style>
+</head>
+<body>
+    <div id="details">
+    <h1 id="h1">ID Card Details</h1>
+    <form autocomplete="off">
+        <label>Name: </label>
+        <input id="name" type="text" placeholder="Enter your name" required><br><br>
+        <label >Roll no: </label>
+        <input id="Rollno" type="text" placeholder="63EC005" required><br><br>
+        <label>Reg_no: </label>
+        <input id="Regno" type="text" placeholder="19D125" required><br><br>
+        <label>Categories of Engineering: </label>
+        <select id="option1" required>
+            <option value="" style="text-align: center;">
+                -----
+            </option>
+            <option value="M.E">
+                M.E
+            </option>
+            <option value="B.E">
+                B.E
+            </option>
+            <option value="M.Tech">
+                M.Tech
+            </option>
+            <option value="B.Tech">
+                B.tech
+            </option>
+            <option value="Phd">
+                Phd
+            </option>
+            <option value="others">
+                others
+            </option>
+        </select><br><br>
+        <div id="hide1" style="display: none;">
+            <label>Enter the Values:  </label>
+            <input id="req1" type="text" placeholder="Type the other value" required><br><br>
+        </div>
+        <label>Categories of Department: </label>
+        <select id="option2" required>
+            <option value="" style="text-align: center;">
+                -----
+            </option>
+            <option value="Civil Engineering">
+                Civil Engineering
+            </option>
+            <option value="Mechanical Engineering">
+                Mechanical Engineering
+            </option>
+            <option value="Electrical and Electronics Engineering">
+                Electrical and Electronics Engineering
+            </option>
+            <option value="Electronics and Communication Engineering">
+                Electronics and Communication Engineering
+            </option>
+            <option value="Information technology Engineering">
+                Information technology Engineering
+            </option>
+            <option value="Computer Science Engineering">
+                Computer Science Engineering
+            </option>
+            <option value="others">
+                others
+            </option>
+        </select><br><br>
+        <div id="hide2" style="display: none;">
+            <label>Enter the Values:  </label>
+            <input id="req2" type="text" placeholder="Type the other value" required><br><br>
+        </div>
+        <label>Year of joining:  </label>
+        <input id="join" type="text" placeholder="June 2020" required><br><br>
+        <label>Date of Brith:  </label>
+        <input id="brith" type="text" placeholder="06/12/2001" required><br><br>
+        <label>Blood Group: </label>
+        <select id="option3" style="margin-left: 10px;" required>
+            <option value="" style="text-align: center;">
+                -----
+            </option>
+            <option value="A -ve">
+                A -ve
+            </option>
+            <option value="A -ve">
+                A +ve
+            </option>
+            <option value="B -ve">
+                B -ve
+            </option>
+            <option value="B +ve">
+                B +ve
+            </option>
+            <option value="AB -ve">
+                AB -ve
+            </option>
+            <option value="AB +ve">
+                AB +ve
+            </option>
+            <option value="O -ve">
+                O -ve
+            </option>
+            <option value="O +ve">
+                O +ve
+            </option>
+            <option value="others">
+                others
+            </option>
+        </select><br><br>
+        <div id="hide3" style="display: none;">
+            <label>Enter the Values:  </label>
+            <input id="req3" type="text" placeholder="Type the other value" required><br><br>
+        </div>
+        <label>Address line 1:  </label>
+        <input id="address1" type="text" placeholder="S/o: Father Name" required><br><br>
+        <label>Address line 2:  </label>
+        <input id="address2" type="text" placeholder="Door no, street no, street name" required><br><br>
+        <label>Address line 3:  </label>
+        <input id="address3" type="text" placeholder="Village name/Town name, Taluk" required><br><br>
+        <label>Address line 4:  </label>
+        <input id="address4" type="text" placeholder="District, Pincode" required><br><br>
+        <label>Contact No:  </label>
+        <input id="conactno" type="text" placeholder="Enter your mobile no/Father no" required><br><br>
+        <label>Select image:</label>
+        <input id="images" class="img" onchange="previewImage(event)" type="file" id="img" name="img" accept="image/*" required><br><br><br>           
+        <input id="button" type="submit" onclick="work()" value="Submit">
+    </form>
+</div>
+<br><br><br>
+<div id="front">
+    <div id="color">
+        <img id="logo" src="tce_logo.png" />
+        <h1 id="cllg">THIAGARAJAR COLLEGE OF ENGINEERING</h1>
+        <h2 id="autono">(A Govt. Aided Autonomous Institution)</h2>
+        <h3 id="place">Madurai, Tamil Nadu-625015</h3>
+        <p id="algin">Ph: 0452 2482240 | Web: www.tce.edu</p>
+    </div><br><br>
+    <img id="profile" src="a85700f3c614f6313750b9d8196c08f5.png" />
+    <h1 id="nameid">NAME</h1>
+    <h1 id="Roll">Roll NO / Reg No</h1>
+    <h1 id="engcat">BE / ECE</h1>
+    <img id="barcode1" src="figure_2.1_-_barcodes_consist_of_alternating_thick_and_thin_vertical_dark_and_light_bars.png" /><br><br><br>
+    <p id="valid">Valid upto: May </p>
+    <img id="pic" src="signature.jpg" /><br>
+    <h2 id="ic">PRINCIPAL(i/c)</h2>
+</div>
+<br><br><br>
+<div id="back">
+    <h2 id="dateB">Date of Birth: </h2>
+    <h2 id="bld">Blood Group: </h2>
+    <h2>Address: </h2>
+    <div id="line">
+    <h2 id="line1">Address: </h2>
+    <h2 id="line2">Address: </h2>
+    <h2 id="line3">Address: </h2>
+    <h2 id="line4">Address: </h2>
+    </div>
+    <h2 id="conno">Contact No: </h2>
+    <div id="help">
+    <p>National Anti-Ragginng Helpline Toll Free No: 1800-190-5522</p>
+    <p>Email: helpline@antiragging.in</p>
+    </div>
+</div>
+
+<p id="dev">Developed by <a href="https://www.linkedin.com/in/meiyappan-a-23a697206">Meiyappan Anbu</a> </p>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+<script>
+    var flag=Number(0)
+    function submitForm(event) {
+        event.preventDefault();
+    }
+    form.addEventListener('submit', submitForm);
+    function final(){
+        alert("Make Sure that details has been correctly..!")
+  document.getElementById("details").style.display="none"
+  document.getElementById("dev").style.display="none"
+  document.getElementById("front").style.display="block"
+  document.getElementById("back").style.display="block"
+    }
+    function handlesubmit(event){
+        event.preventDefault();
+    }
+const var1 = document.getElementById('option1');
+var1.addEventListener('change', function() {
+  if (var1.value == 'others') {
+      document.getElementById('hide1').style.display = 'block';
+      document.getElementById("req1").setAttribute("required", "true");
+    } else {
+      document.getElementById('hide1').style.display = 'none';
+      document.getElementById("req1").removeAttribute("required");
+    }
+  }
+);
+const var2 = document.getElementById('option2');
+var2.addEventListener('change', function() {
+  if (var2.value == 'others') {
+      document.getElementById('hide2').style.display = 'block';
+      document.getElementById("req2").setAttribute("required", "true");
+    } else {
+      document.getElementById('hide2').style.display = 'none';
+      document.getElementById("req2").removeAttribute("required");
+    }
+  }
+);
+const var3 = document.getElementById('option3');
+var3.addEventListener('change', function() {
+  if (var3.value == 'others') {
+      document.getElementById('hide3').style.display = 'block';
+      document.getElementById("req3").setAttribute("required", "true");
+    } else {
+      document.getElementById('hide3').style.display = 'none';
+      document.getElementById("req3").removeAttribute("required");
+    }
+  }
+);
+
+function work(){
+  var roll=document.getElementById("Rollno").value;
+  var reg=document.getElementById("Regno").value;
+  var eng=document.getElementById("option1").value;
+  var dept=document.getElementById("option2").value;
+  var bloodgrp=document.getElementById("option3").value;
+  var a=document.getElementById("address1").value;
+  var b=document.getElementById("address2").value;
+  var c=document.getElementById("address3").value;
+  var d=document.getElementById("address4").value;
+  var cont=document.getElementById("conactno").value;
+  if(roll!="" && reg!="" && eng!="" && dept!="" && bloodgrp!="" && a!="" && b!="" && c!="" && d!="" && cont!="" && flag!=0){
+    final()
+  }
+  document.getElementById("Roll").innerHTML=roll+' / '+reg
+  document.getElementById("nameid").innerHTML=document.getElementById("name").value;
+  engineering(eng,dept);
+  validupto()
+  generatebarcode(roll)
+  dob()
+  blood(bloodgrp)
+  address(a,b,c,d)
+  contact(cont)
+}
+function engineering(val1,val2){
+  txt=""
+  if(val1=="others"){
+    txt+=document.getElementById("req1").value
+  }
+  else{
+    txt+=val1;
+  }
+  txt+=" / "
+  if(val2=="others"){
+    txt+=document.getElementById("req2").value
+  }
+  else{
+    txt+=val2;
+  }
+  document.getElementById("engcat").innerHTML=txt;
+}
+function validupto(){
+  var a=document.getElementById("join").value;
+  var arr=a.split(" ");
+  txt=Number(arr[1])+Number(4);
+  document.getElementById("valid").innerHTML+=txt
+}
+function generatebarcode(value){
+  JsBarcode('#barcode1',value,{
+      format:"code128",
+      width:2,
+      height: 10,
+      displayValue: false,
+  });
+}
+function dob(){
+  document.getElementById("dateB").innerHTML+=document.getElementById("brith").value;
+}
+function blood(val){
+  if(val=="others"){
+    document.getElementById("bld").innerHTML+=document.getElementById("req3").value;
+  }
+  else{
+    document.getElementById("bld").innerHTML+=val;
+  }
+}
+function address(a,b,c,d){
+  document.getElementById("line1").innerHTML=a
+  document.getElementById("line2").innerHTML=b
+  document.getElementById("line3").innerHTML=c
+  document.getElementById("line4").innerHTML=d
+}
+function contact(val){
+  document.getElementById("conno").innerHTML+=val
+}
+function previewImage(event) {
+  document.getElementById('profile').src = URL.createObjectURL(event.target.files[0]);
+  flag=Number(1)
+}
+
+</script>
+</html>
